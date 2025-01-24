@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply antialiased;
+}
+
+.dropdown-transition {
+  transition: all 0.2s ease-in-out;
+}
+
+.dropdown-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.dropdown-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+/* Xətlərin animasiyası */
+.line-effect {
+  width: 50px; /* Xəttin eni */
+  height: 2px; /* Xəttin qalınlığı */
+  background-color: #4caf50; /* Xəttin rəngi */
+  position: absolute;
+  animation: drawLine 2s ease-out forwards;
+}
+
+@keyframes drawLine {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 50px;
+  }
+}
+
+.line-effect {
+  border-radius: 10px;
+  opacity: 0;
+}
+
+.line-effect[data-aos="fade-up"] {
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.line-effect-left {
+  left: -40px;
+}
+
+.line-effect-right {
+  right: -40px;
+}
+
+.line-effect-top {
+  top: 25%;
+}
+
+.line-effect-bottom {
+  bottom: 25%;
+}
+/* Technologies bölməsində şəkilləri tam ekran tutması üçün */
+.technology-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* RoomGallery bölməsində şəkilləri tam ekran tutması üçün */
+.room-gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Mobil uyğunluq üçün şəkillərin ölçüsünün düzgün tənzimlənməsi */
+@media (max-width: 768px) {
+  .technology-image,
+  .room-gallery-image {
+    height: auto; /* Mobil ekranlarda şəkil ölçüsünü tənzimləyirik */
+  }
+}
