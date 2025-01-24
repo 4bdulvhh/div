@@ -107,7 +107,7 @@ const Hero = () => {
           
       `}</style>
 
-      <div className="relative flex flex-col h-[55vh] lg:min-h-[calc(100vh-64px)] bg-[#F5F7FA] overflow-hidden">
+      <div className="relative flex flex-col h-[80vh] lg:min-h-[calc(100vh-64px)] bg-[#F5F7FA] overflow-hidden">
         <div className="flex relative h-full max-h-[calc(100vh-64px)]">
           <div className="w-full md:w-[40%]  px-6 md:pl-20 pt-16 relative overflow-hidden">
             <div className="relative h-full">
